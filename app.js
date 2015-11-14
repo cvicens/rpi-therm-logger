@@ -9,12 +9,12 @@ var logger = new RestLogger(config);
 function sendTempData (sensorId, temp) {
   logger.sendTempData(sensorId, temp, true, function (err, response, body) {
     if (!err && response.statusCode == 200) {
-      console.log('body: ' + JSON.stringify(body));
+      console.log('[DEBUG] body: ' + JSON.stringify(body));
     } else {
       if (err) {
-        console.error('err: ' + err);
+        console.error('[ERROR] err: ' + err);
       } else {
-        console.error('err response: ' + response);
+        console.error('[ERROR] response: ' + response);
       }
     }
   });
