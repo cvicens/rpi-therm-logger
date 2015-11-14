@@ -1,0 +1,19 @@
+{
+  "name": "rpi-therm-logger",
+  "version": "1.0.0",
+  "description": "Therm logger REST",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cvicens/rpi-therm-logger"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cvicens/rpi-therm-logger/issues"
+  },
+  "homepage": "https://github.com/cvicens/rpi-therm-logger"
+}
