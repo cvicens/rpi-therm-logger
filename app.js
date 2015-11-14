@@ -24,13 +24,12 @@ setInterval(function () {
   sensor.list(function (err, listOfDeviceIds) {
       console.log(listOfDeviceIds);
       for (var deviceId in listOfDeviceIds) {
-        if (listOfDeviceIds.hasOwnProperty(deviceId)) {
-          sensor.get(deviceId, function (err, temp) {
-              if (!err) {
-                sendTempData(deviceId, temp);
-              }
-          });
-        }
+        console.log('deviceId: ' + deviceId);
+        sensor.get(deviceId, function (err, temp) {
+            if (!err) {
+              sendTempData(deviceId, temp);
+            }
+        });
       }
   });
 
