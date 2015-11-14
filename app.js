@@ -7,6 +7,7 @@ var RestLogger = require('./rest-logger');
 var logger = new RestLogger(config);
 
 function sendTempData (sensorId, temp) {
+  console.log('[FINEST] sensorId: ' + sensorId + ' temp: ' + temp);
   logger.sendTempData(sensorId, temp, true, function (err, response, body) {
     if (!err && response.statusCode == 200) {
       console.log('[DEBUG] body: ' + JSON.stringify(body));
