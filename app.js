@@ -22,12 +22,12 @@ function sendTempData (sensorId, temp) {
 
 setInterval(function () {
   sensor.list(function (err, listOfDeviceIds) {
-      console.log(listOfDeviceIds);
-      for (var deviceId in listOfDeviceIds) {
-        console.log('deviceId: ' + deviceId);
-        sensor.get(deviceId, function (err, temp) {
+      console.log('[DEBUG] Devices: ' + listOfDeviceIds);
+      for (var i = 0; i < listOfDeviceIds.length; i++) {
+        console.log('[FINE] deviceId: ' + listOfDeviceIds[i]);
+        sensor.get(listOfDeviceIds[i], function (err, temp) {
             if (!err) {
-              sendTempData(deviceId, temp);
+              sendTempData(listOfDeviceIds[i], temp);
             }
         });
       }
