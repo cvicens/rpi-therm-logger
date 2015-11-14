@@ -1,0 +1,4 @@
+{
+  "SENSOR_ID" : "00000",
+  "TEMPERATURE_SERVICE_URL" : "http://localhost:3000/temp/:sensorId/:temp/:presence"
+}
